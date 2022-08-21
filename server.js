@@ -58,14 +58,14 @@ app.delete('/api/candidate/:id', (req, res) => {
         if (err) {
             res.statusMessage(400).json({ error: res.message });
         } else if (!result.affectedRows) {
-            res.json({
-            message: 'Candidate not found'
+                res.json({
+                message: 'Candidate not found'
             });
         } else {
             res.json({
-            message: 'deleted',
-            changes: result.affectedRows,
-            id: req.params.id
+                message: 'deleted',
+                changes: result.affectedRows,
+                id: req.params.id
             });
         }
     });
