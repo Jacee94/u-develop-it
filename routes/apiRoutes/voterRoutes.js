@@ -98,7 +98,7 @@ router.delete('/voter/:id', (req, res) => {
             res.status(400).json({ error: res.message });
         } else if (!result.affectedRows) {
             res.json({
-            message: 'Voter not found'
+                message: 'Voter not found'
             });
         } else {
             res.json({
